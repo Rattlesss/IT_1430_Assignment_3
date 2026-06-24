@@ -6,39 +6,60 @@
 }
 
 /* ===== Define variables ===== */
-:root { /* Gradient shading */
+:root {
+    /* Gradient colors — used in html background */
     --sunset-orange: #E08E1D;
     --sunset-red: #8B0000;
     --sunset-wine: #632846;
     --bluebonnet-blue: #3A4F8C;
 
-    /* Specific colors, non-standard */
-    /* 'standard' being like; white, grey, black, etc */
-    --plum: #5C2A3D;
-    --indigo: #3B4A6B;
-    --cream: #F5F0E6;
-    --charcoal: #232733;
-    --cotton: #F5F0E6;
-    --asphalt: #2B2B2B;
+    /* Custom named colors — used across structural elements, links, headings */
+    /* ('standard' meaning colors like white, grey, black, etc.) */
+    --plum: #5C2A3D;       /* header background, nav link background */
+    --indigo: #3B4A6B;     /* nav background */
+    --cream: #F2EAD8;      /* parchment-esque, used for main background */
+    --charcoal: #232733;   /* footer background, nav border-bottom */
+    --cotton: #F5F0E6;     /* off-white, used for text on dark sections */
+    --asphalt: #2B2B2B;    /* dark text, used on main */
+    --amber: #9C6B22;      /* h2 color, nav link border + hover background */
+    --teal: #2F6F57;       /* h3 color, related-links color */
 }
 
 /* ===== Page background ===== */
-html { /* whole page */
+html {
     background: linear-gradient(180deg, var(--sunset-orange) 0%, var(--sunset-red) 40%, var(--sunset-wine) 70%, var(--bluebonnet-blue) 100%);
     min-height: 100vh;
     font-family: 'Trebuchet MS', 'Verdana', sans-serif;
 }
 
-/* ===== Layout ===== */
+/* ===== Page layout ===== */
 #wrapper {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
-    border: 6px solid black;
+    border: 6px solid var(--charcoal);
     border-radius: 16px;
-    background-color: darkgrey;
+    background-color: var(--cream);
 }
 
+/* ===== Horizontal rule ===== */
+hr {
+    height: 6px;
+    background-color: var(--indigo);
+    border: none;
+    border-radius: 3px;
+}
+
+/* ===== Headings ===== */
+h2 {
+    color: var(--amber);
+}
+
+h3 {
+    color: var(--teal);
+}
+
+/* ===== Structural elements ===== */
 header {
     padding: 20px;
     background-color: var(--plum);
@@ -57,7 +78,7 @@ nav {
 main {
     padding: 20px;
     background-color: var(--cream);
-    color: var(--asphalt) ;
+    color: var(--asphalt);
 }
 
 footer {
@@ -67,3 +88,37 @@ footer {
     text-align: center;
 }
 
+/* ===== Navigation links ===== */
+nav a {
+    display: inline-block;
+    color: var(--cotton);
+    background-color: var(--plum);
+    text-decoration: none;
+    padding: 8px 16px;
+    margin-right: 12px;
+    border: 2px solid var(--amber);
+    border-radius: 10px;
+}
+
+nav a:last-child {
+    margin-right: 0;
+}
+
+nav a:hover {
+    background-color: var(--amber);
+    color: var(--charcoal);
+}
+
+/* ===== Footer & related links ===== */
+footer a {
+    color: var(--amber);
+}
+
+#related-park-news a {
+    color: var(--teal);
+}
+
+/* ===== Lists ===== */
+#related-park-news ul {
+    list-style-type: square;
+}
