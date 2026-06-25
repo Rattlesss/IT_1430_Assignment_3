@@ -23,6 +23,8 @@
     --asphalt: #2B2B2B;    /* dark text, used on main */
     --amber: #9C6B22;      /* h2 color, nav link border + hover background */
     --teal: #2F6F57;       /* h3 color, related-links color */
+    --wheat: #EFE3C8;   /* table: odd row background */
+    --mist: #DCE3EA;    /* table: even row background */
 }
 
 /* ===== Page background ===== */
@@ -114,11 +116,48 @@ footer a {
     color: var(--amber);
 }
 
+/* ===== Lists ===== */
+#related-park-news ul {
+    list-style-type: square;
+}
+
 #related-park-news a {
     color: var(--teal);
 }
 
-/* ===== Lists ===== */
-#related-park-news ul {
-    list-style-type: square;
+/* ===== Table (info.html) ===== */
+table {
+    border: 3px solid var(--charcoal);
+    border-collapse: collapse;
+    margin: 20px auto;
+    width: 70%;
+}
+
+th, td {
+    border: 1px solid var(--charcoal);
+    padding: 12px;
+    text-align: center;
+}
+
+thead th {
+    background-color: var(--indigo);
+    color: var(--cotton);
+}
+
+tbody tr:nth-child(odd) {
+    background-color: var(--wheat);
+    color: var(--asphalt);
+}
+
+tbody tr:nth-child(even) {
+    background-color: var(--mist);
+    color: var(--indigo);
+}
+
+caption {
+    width: 100%;
+    text-align: right;
+    padding: 10px;
+    color: var(--teal);
+    font-style: italic;
 }
