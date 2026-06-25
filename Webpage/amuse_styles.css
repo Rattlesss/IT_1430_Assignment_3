@@ -39,9 +39,10 @@ html {
     max-width: 1000px;
     margin: 0 auto;
     padding: 30px;
-    border: 6px solid var(--charcoal);
+    border: 10px solid var(--amber);
     border-radius: 16px;
     background-color: var(--cream);
+    overflow: hidden;
 }
 
 /* ===== Horizontal rule ===== */
@@ -67,6 +68,9 @@ header {
     background-color: var(--plum);
     color: var(--cotton);
     text-align: center;
+    border: 6px solid var(--amber);
+    border-bottom: none;
+    border-radius: 16px 16px 0 0;
 }
 
 nav {
@@ -74,7 +78,9 @@ nav {
     background-color: var(--indigo);
     color: var(--cotton);
     text-align: center;
-    border-bottom: 8px solid var(--charcoal);
+    border: 6px solid var(--amber);
+    border-top: none;
+    border-radius: 0 0 16px 16px;
 }
 
 main {
