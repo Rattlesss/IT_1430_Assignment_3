@@ -37,8 +37,8 @@ html {
 /* ===== Page layout ===== */
 #wrapper {
     max-width: 1000px;
-    margin: 0 auto;
-    padding: 30px;
+    margin: 40px auto; /* outside */
+    padding: 30px; /* inside */
     border: 10px solid var(--amber);
     border-radius: 16px;
     background-color: var(--cream);
@@ -51,6 +51,7 @@ hr {
     background-color: var(--indigo);
     border: none;
     border-radius: 3px;
+    margin: 20px 0;
 }
 
 /* ===== Headings ===== */
