@@ -13,18 +13,17 @@
     --sunset-wine: #632846;
     --bluebonnet-blue: #3A4F8C;
 
-    /* Custom named colors — used across structural elements, links, headings */
-    /* ('standard' meaning colors like white, grey, black, etc.) */
+    /* Custom colors — used across structural elements, links, headings */
     --plum: #5C2A3D;       /* header background, nav link background */
     --indigo: #3B4A6B;     /* nav background */
     --cream: #F2EAD8;      /* parchment-esque, used for main background */
-    --charcoal: #232733;   /* footer background, nav border-bottom */
+    --charcoal: #232733;   /* footer background, table borders */
     --cotton: #F5F0E6;     /* off-white, used for text on dark sections */
     --asphalt: #2B2B2B;    /* dark text, used on main */
     --amber: #9C6B22;      /* h2 color, nav link border + hover background */
     --teal: #2F6F57;       /* h3 color, related-links color */
-    --wheat: #EFE3C8;   /* table: odd row background */
-    --mist: #DCE3EA;    /* table: even row background */
+    --wheat: #EFE3C8;      /* table: odd row background */
+    --mist: #DCE3EA;       /* table: even row background */
 }
 
 /* ===== Page background ===== */
@@ -162,9 +161,48 @@ tbody tr:nth-child(even) {
 }
 
 caption {
-    width: 100%;
     text-align: right;
     padding: 10px;
     color: var(--teal);
     font-style: italic;
+}
+
+/* ===== Ride images and captions (rides.html) ===== */
+article {
+    overflow: auto; /*clearfix: contains the floated figure*/
+    margin-bottom: 20px;
+}
+
+article h3 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+article hr {
+    clear: both; /* drops <hr> below the floated figure */
+}
+
+.rides-intro {
+    margin-top: 5px;
+    margin-bottom: 20px;
+}
+
+figure {
+    float: left;
+    margin: 0 20px 20px 0;
+    max-width: 280px;
+}
+
+figure img {
+    width: 100%;
+    display: block;
+    border: 4px solid var(--amber);
+    border-radius: 8px;
+}
+
+figcaption {
+    margin-top: 6px;
+    font-size: 0.75rem;
+    font-style: italic;
+    color: var(--asphalt);
 }
