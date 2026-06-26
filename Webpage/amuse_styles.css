@@ -206,3 +206,60 @@ figcaption {
     font-style: italic;
     color: var(--asphalt);
 }
+
+/* ===== Forms (order.html) ===== */
+form {
+    background-color: var(--indigo);
+    padding: 30px;
+    max-width: 600px;
+    margin: 30px auto;
+    border-radius: 16px;
+}
+
+fieldset {
+    border: 5px solid var(--amber);
+    background-color: var(--wheat);
+    width: 90%;
+    margin: 0 auto 20px auto;
+    padding: 20px;
+}
+
+legend {
+    border: 2px solid var(--amber);
+    background-color: var(--plum);
+    color: var(--cotton);
+    padding: 4px 12px;
+    border-radius: 8px;
+}
+
+fieldset p {
+    margin-top: 12px; /* spaces out every row in the fields */
+}
+
+fieldset label {
+    font-weight: bold;
+}
+
+fieldset input[type="text"],
+fieldset input[type="email"],
+fieldset input[type="tel"],
+fieldset input[type="number"],
+fieldset input[type="date"],
+fieldset select {
+    display: block;
+    width: 100%;
+    max-width: 300px;
+    padding: 6px;
+    margin-top: 4px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px auto 0 auto; /* centers the button below the fieldsets */
+    padding: 10px 30px;
+    background-color: var(--plum);
+    color: var(--cotton);
+    border: 2px solid var(--amber);
+    border-radius: 8px;
+    font-weight: bold;
+}
