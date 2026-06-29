@@ -129,9 +129,13 @@ nav a:hover {
     color: var(--charcoal);
 }
 
-/* ===== Footer & related links ===== */
+/* ===== Hyperlink colors ===== */
 footer a {
     color: var(--amber);
+}
+
+#related-park-news a {
+    color: var(--teal);
 }
 
 /* ===== Lists ===== */
@@ -141,10 +145,6 @@ li {
 
 #related-park-news ul {
     list-style-type: square;
-}
-
-#related-park-news a {
-    color: var(--teal);
 }
 
 /* ===== Table (info.html) ===== */
